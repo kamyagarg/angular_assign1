@@ -1,0 +1,91 @@
+main{
+    display: flex;
+    margin: 2rem 8rem;
+}
+.box{
+    border-radius: 8px;
+    display: flex;
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.margin-extra{
+    margin: 1rem;
+}
+
+footer{
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 8rem;
+    margin: 1rem 8rem;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.subs{
+    font-size: 1.60rem;
+}
+
+input{
+    border-radius: 2rem;
+    height: 2rem;
+    width: 20.5rem;
+    border: none;
+    padding: 0.5rem 2rem;
+    outline: none;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 2rem;
+
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.output{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+@media only screen and (max-width: 800px){
+    main{
+        display:block;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .margin-extra{
+        margin: 0;
+    }
+    .text{
+        margin-bottom: 0.5rem;
+    }
+    .search{
+        margin-top: 0.5rem;
+    }
+}

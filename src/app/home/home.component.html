@@ -1,0 +1,22 @@
+<main *ngIf="brews">
+    <!-- <ul *ngIf="brews"> 
+        <li *ngFor ="let brew of brews">{{ brew.name }}</li>
+    </ul> --> 
+    <div >
+        <article class="box output" *ngFor="let brew of brews">
+            <p class="">{{ brew.name }} <br></p>
+            <p class="">Type: {{ brew.brewery_type }}</p>
+        </article>
+    </div>
+</main>
+
+<footer>
+    <div class="text">
+        <div class="subs">Food</div>
+        <div class="updated">ingredient</div>
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Enter here">
+        <button (click)="showIng()">Search</button>
+    </div>
+</footer>
