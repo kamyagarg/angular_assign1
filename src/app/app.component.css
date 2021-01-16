@@ -5,13 +5,13 @@ body{
 }
 
 header{
-    background-color:#EAECEE;
+    /* background-color:#EAECEE; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 8rem;
     box-sizing: border-box;
-    border-bottom: 1px solid ;
+    box-shadow: 0 1px 4px grey;
 }
 .logo{
     width: 3rem;
@@ -64,7 +64,7 @@ a{
 }
 
 .icons-all{
-    width: 0.75rem;
+    width: 1.75rem;
     padding: 0 0 0 1rem;
 }
 

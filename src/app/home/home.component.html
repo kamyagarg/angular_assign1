@@ -1,21 +1,45 @@
-<main *ngIf="new_brews">
-    <!-- <ul *ngIf="brews"> 
-        <li *ngFor ="let brew of brews">{{ brew.name }}</li>
-    </ul> --> 
-        <div class="box output" *ngFor= "let brew of new_brews">
-            <p class="">Name: {{ brew.name }} <br></p>
-            <p class="">Type: {{ brew.brewery_type }}</p>
+<!-- <main *ngFor="let brew of brews">
+    <div class="box output" *ngIf='brew.brewery_type == ing_name.value'>
+        <p class="">Name: {{ brew.name }} <br></p>
+        <p class="">Type: {{ brew.brewery_type }}</p>
+
+    </div>
+</main> -->
+
+
+<div id="container">
+    <div ng2-carouselamos class="slides-wrapper" [items]="items" [width]="800" [$prev]="prev" [$next]="next"
+        [$item]="item">
+    </div>
+
+
+    <ng-template #prev>
+        <img src="assets/left-arrow.svg" id="left" />
+    </ng-template>
+    <ng-template #next>
+        <img src="assets/right-arrow.svg" id="right" />
+    </ng-template>
+    <ng-template #item let-item>
+        <div class="items box">
+            <p class="bname">{{item.name}}</p>
+            <p class="btype">{{item.brewery_type}}</p>
         </div>
-    
-</main>
+    </ng-template>
+</div>
 
 <footer>
-    <div class="text">
-        <div class="subs">Food</div>
-        <div class="updated">ingredient!</div>
+    <div class="c1">
+        <div class="text">
+            <div class="subs">Brewery </div>
+            <div class="updated">Type</div>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Enter here" #ing_name>
+            <!-- <button (click)="showIng(ing_name)">Search</button> -->
+            <button class="submit-button state-0" (click)="showIng(ing_name)">Search</button>
+        </div>
     </div>
-    <div class="search">
-        <input type="text" placeholder="Enter here">
-        <button >Search</button>
+    <div class="c2">
+        <p>Hint: micro,contract,brewpub,regional</p>
     </div>
 </footer>
